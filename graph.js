@@ -10,9 +10,11 @@ graph.prototype={
 	},
 	printNodes:function(){
 
-		for(var i=0; len =nodelist.length; i< len;i++){
+		for(var i=0, len =nodelist.length; i< len;i++){
 			console.log(nodelist[i]);
 		}
 
 	}
 }
+
+module.exports = graph;

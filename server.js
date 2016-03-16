@@ -1,11 +1,15 @@
 var express = require('express');
 var app = express();
+var network = require("./graph.js");
+var PORT = process.env.port || 3000;
 
 app.get('/', function(req,res){
 	res.send('Hello Express!');
 });
 
-app.get('/hosts',function(req,res){
+app.get('/host',function(req,res){
 	res.send('These are the hosts');
 });
-app.listen(3000);
+app.listen(PORT,function(){
+	console.log('Express started on port '+ PORT + '!');
+});
